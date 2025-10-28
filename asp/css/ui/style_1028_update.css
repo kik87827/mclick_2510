@@ -48,9 +48,10 @@ html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;bo
   -ms-user-select: none;
   pointer-events: auto;    /* 클릭은 가능하도록 유지 (필요 시) */
 }
-
-@media (max-width:1023px){
+@media (max-width:1260px){
     .banner-chipcard-wrap{margin:0 30px;}
+}
+@media (max-width:1023px){
     .banner-chipcard-item{width:calc(100vw - 30px)}
 }
 
