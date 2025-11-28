@@ -10,7 +10,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;bo
 .middle_wrap{position:relative;overflow-x:hidden;}
 .middle_inner{max-width:1200px;padding:0 30px 120px;margin:0 auto;}
 
-.banner-chipcard-zone{position:relative;overflow:hidden;}
+.banner-chipcard-zone{position:relative;overflow:hidden; padding-top:10px;}
 .banner-chipcard-wrap{position:relative; margin:0 auto; max-width:1200px;}
 .swiper-container.banner-chipcard-container{width: 100%;  overflow: visible !important; /* Swiper 컨테이너가 숨기지 않게 */}
 .swiper-container.banner-chipcard-container .swiper-wrapper {overflow: visible !important; /* 슬라이드 전체 노출 */}
@@ -26,8 +26,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;bo
 .btn-chipcard-navi.next{right:-20px;}
 .btn-chipcard-navi.next:after{transform:rotate(-45deg);margin:-5px 0 0 -9px;}
 
-.banner-chipcard-item{height:360px; width:280px; position:relative; overflow:hidden; border-radius: 10px; display:block;}
-.banner-chipcard-item:hover .banner-img-group > img{ transform:scale(1.2);}
+.banner-chipcard-item{height:360px; width:280px; position:relative; overflow:hidden; border-radius: 10px; display:block; transition:transform 1s;transform:translateY(0);}
+/* .banner-chipcard-item:hover .banner-img-group > img{ transform:scale(1.2);} */
+.banner-chipcard-item:hover{transform:translateY(-10px);}
 .banner-text-group{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2; box-sizing:border-box; padding:26px 28px; background:url("../../images/dim_thum.png") repeat-x 0 0;}
 .banner-text-item{}
 .banner-text-main,
@@ -49,11 +50,17 @@ html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;bo
   -ms-user-select: none;
   pointer-events: auto;    /* 클릭은 가능하도록 유지 (필요 시) */
 }
+.banner-chipcard-title-row{text-align: center; padding:0 30px 15px;position:relative; margin:0 auto; max-width:1200px;}
+.banner-chipcard-title{font-weight:700; color:#333; font-size:28px; letter-spacing: -1px;}
 @media (max-width:1260px){
     .banner-chipcard-wrap{margin:0 30px;}
 }
 @media (max-width:1023px){
     .banner-chipcard-item{width:calc(100vw - 30px)}
+    .banner-text-sub{font-size:16px;}
+    .banner-text-main{font-size:14px;}
+    .banner-chipcard-title-row{padding:0 20px 10px;}
+    .banner-chipcard-title{font-size:24px;}
 }
 
 @media (max-width:767px){
